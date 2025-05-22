@@ -38988,6 +38988,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\FolderImages\blogs\screenshot2023-04-26231030png.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\FolderImages\blogs\vaogiuongpng.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pet_Shop2</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pet_Shop2</BasePath>
+      <RelativePath>FolderImages/blogs/vaogiuongpng.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vdrxhf8tva</Fingerprint>
+      <Integrity>HeoXBK4cK3SNAoXyvaSenp+A+CtCUAsq1NwZ4yeU+1s=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\FolderImages\blogs\vaogiuongpng.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\FolderImages\Categories\13-10-2023QATCcategories.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Pet_Shop2</SourceId>

@@ -39,19 +39,7 @@ namespace Pet_Shop2.Areas.Admin.Controllers
                 {
                     // Tạo tên file mới
                     string fileName = $"{DateTime.Now.ToString("dd-MM-yyyy") + item.Alias + "categories"}{Path.GetExtension(imageFile.FileName)}";
-
                     item.Image= await Utilities.UploadFile(imageFile, @"Categories", fileName);
-                    // Đường dẫn lưu trữ
-                    /*string uploadsFolder = Path.Combine(_environment.WebRootPath, "Categories");
-                    string filePath = Path.Combine(uploadsFolder, fileName);
-
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await imageFile.CopyToAsync(stream);
-                    }
-
-                    // Lưu trữ đường dẫn của hình ảnh vào cơ sở dữ liệu hoặc làm bất kỳ xử lý nào khác bạn cần thiết ở đây.
-                    item.Image = fileName;*/
                 }
 
                 db.Categories.Add(item);

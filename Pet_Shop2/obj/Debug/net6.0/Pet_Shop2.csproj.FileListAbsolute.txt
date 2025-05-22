@@ -1120,10 +1120,10 @@ D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\staticwebassets\msbuild.build.Pet
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Pet_Shop2.props
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Pet_Shop2.props
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\staticwebassets.pack.json
-D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\Pet_Shop2.csproj.Up2Date
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\Pet_Shop2.dll
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\refint\Pet_Shop2.dll
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\Pet_Shop2.pdb
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\Pet_Shop2.genruntimeconfig.cache
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\ref\Pet_Shop2.dll
+D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt

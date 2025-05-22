@@ -58,7 +58,6 @@ namespace Pet_Shop2.Controllers
         [AllowAnonymous]
         public IActionResult Login()
         {
-
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
             var returnUrl = HttpContext.Request.Query["ReturnUrl"].ToString();
             if (taikhoanID == null)
@@ -69,13 +68,9 @@ namespace Pet_Shop2.Controllers
             }
             else
             {
-
                 return RedirectToAction("index", "home");
-
             }
-
         }
-
 
         [HttpPost]
         [AllowAnonymous]
@@ -380,10 +375,6 @@ namespace Pet_Shop2.Controllers
   </div>
  </body>
 </html>";
-
-
-
-
 
                     acc.Password =HashMD5.ToMD5(randompass.ToString());
                     db.SaveChanges();

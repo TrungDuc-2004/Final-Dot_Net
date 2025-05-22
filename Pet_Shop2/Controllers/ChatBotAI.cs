@@ -18,7 +18,7 @@ namespace Pet_Shop2.Controllers
 
             // Địa chỉ API và API key của bạn
             string apiUrl = "https://api.openai.com/v1/chat/completions";
-            string apiKey = "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";
+            string apiKey = "";
 
             // Chuỗi tin nhắn bạn muốn gửi đến ChatGPT
             string mess = message;

@@ -80,33 +80,53 @@
 
 
 
-@section Scripts{
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function Delete(id) {
-            if (confirm("Bạn có chắc xóa dòng này không ?")) {
-                $.ajax({
-                    url: '@Url.Action("Delete","Account")',
-                    type: "POST",
-                    data: { id: id },
-                    success: function (result) {
-                        location.reload();
-                    }
+            Swal.fire({
+                title: "Bạn có chắc muốn xóa tài khoản này?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#3085d6",
+                confirmButtonText: "Xóa",
+                cancelButtonText: "Hủy"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: '@Url.Action("Delete", "Account")',
+                        type: "POST",
+                        data: { id: id },
+                        success: function (res) {
+                            if (res.success) {
+                                Swal.fire("Thành công!", res.message ?? "Đã xóa tài khoản.", "success")
+                                    .then(() => location.reload());
+                            } else {
+                                Swal.fire("Lỗi!", res.message ?? "Không thể xóa tài khoản.", "error");
+                            }
+                        },
+                        error: function () {
+                            Swal.fire("Lỗi hệ thống!", "Không thể thực hiện thao tác.", "error");
+                        }
+                    });
                 }
-                );
-            }
+            });
         }
+
         $(".acc_active").change(function () {
             var accID = $(this).attr('id');
             $.ajax({
-                url: '@Url.Action("Edit_Active","Account")',
+                url: '@Url.Action("Edit_Active", "Account")',
                 type: "POST",
                 data: { id: accID },
-                success: function(){
+                success: function () {
                     location.reload();
+                },
+                error: function () {
+                    Swal.fire("Lỗi!", "Không thể cập nhật trạng thái hoạt động.", "error");
                 }
-            }
-            );
-
-        })
+            });
+        });
     </script>
 }

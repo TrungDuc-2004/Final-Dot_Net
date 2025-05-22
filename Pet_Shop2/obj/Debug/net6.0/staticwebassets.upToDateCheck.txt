@@ -2164,6 +2164,7 @@ wwwroot\FolderImages\blogs\screenshot2023-04-22235002-copypng.png
 wwwroot\FolderImages\blogs\screenshot2023-04-22235002png.png
 wwwroot\FolderImages\blogs\screenshot2023-04-25232829png.png
 wwwroot\FolderImages\blogs\screenshot2023-04-26231030png.png
+wwwroot\FolderImages\blogs\vaogiuongpng.png
 wwwroot\FolderImages\Categories\13-10-2023QATCcategories.jpg
 wwwroot\FolderImages\Categories\16-07-2023CLSPKcategories.jpg
 wwwroot\FolderImages\Categories\16-07-2023DCcategories.jpg

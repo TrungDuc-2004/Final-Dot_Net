@@ -47,26 +47,36 @@ namespace Pet_Shop2.Areas.Admin.Controllers
         }
 
         [HttpPost]
-
         public ActionResult Delete(int? id)
         {
             if (id != null)
             {
-                var tmp = db.Accounts.SingleOrDefault(x=> x.Id == id);
-                //Xóa Customer 
-                
-                if(tmp!=null)
+                try
                 {
-                    db.Accounts.Remove(tmp);
+                    var account = db.Accounts
+                                    .Include(a => a.Orders)
+                                    .SingleOrDefault(x => x.Id == id);
+
+                    if (account == null)
+                        return Json(new { success = false, message = "Không tìm thấy tài khoản." });
+
+                    if (account.Orders != null && account.Orders.Any())
+                    {
+                        return Json(new { success = false, message = "Không thể xóa tài khoản vì đã có đơn hàng liên quan." });
+                    }
+
+                    db.Accounts.Remove(account);
                     db.SaveChanges();
-                }    
-                if (tmp != null) { db.Accounts.Remove(tmp); 
-                    db.SaveChanges();
-                
+
+                    return Json(new { success = true, message = "Tài khoản đã được xóa thành công." });
                 }
-                return Json(new { success = true });
+                catch (Exception ex)
+                {
+                    return Json(new { success = false, message = "Lỗi hệ thống: " + ex.Message });
+                }
             }
-            return Json(new { success = false });
+
+            return Json(new { success = false, message = "ID không hợp lệ." });
         }
         public IActionResult Edit(int? id)
         {
