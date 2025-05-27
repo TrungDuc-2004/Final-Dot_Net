@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v5f07o0QGoA=",
+  "dgSpecHash": "K7ceptqPZjk=",
   "success": true,
-  "projectFilePath": "D:\\dotnet\\Pet_Shop2\\Pet_Shop2\\Pet_Shop2.csproj",
+  "projectFilePath": "C:\\Users\\TRUNG DUC\\Downloads\\Pet_Shop2\\Pet_Shop2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TRUNG DUC\\.nuget\\packages\\aspnetcorehero.toastnotification\\1.1.0\\aspnetcorehero.toastnotification.1.1.0.nupkg.sha512",
     "C:\\Users\\TRUNG DUC\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

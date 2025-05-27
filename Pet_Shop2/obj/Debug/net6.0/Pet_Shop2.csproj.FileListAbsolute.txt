@@ -1107,7 +1107,6 @@ D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\Pet_Shop2.MvcApplicationPartsAsse
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\Pet_Shop2.MvcApplicationPartsAssemblyInfo.cache
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\Pet_Shop2.RazorAssemblyInfo.cache
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\Pet_Shop2.RazorAssemblyInfo.cs
-D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\Pet_Shop2.sourcelink.json
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\scopedcss\bundle\Pet_Shop2.styles.css
 D:\dotnet\Pet_Shop2\Pet_Shop2\obj\Debug\net6.0\scopedcss\projectbundle\Pet_Shop2.bundle.scp.css

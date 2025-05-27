@@ -13019,11 +13019,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dotnet\\Pet_Shop2\\Pet_Shop2\\Pet_Shop2.csproj",
+      "projectUniqueName": "C:\\Users\\TRUNG DUC\\Downloads\\Pet_Shop2\\Pet_Shop2.csproj",
       "projectName": "Pet_Shop2",
-      "projectPath": "D:\\dotnet\\Pet_Shop2\\Pet_Shop2\\Pet_Shop2.csproj",
+      "projectPath": "C:\\Users\\TRUNG DUC\\Downloads\\Pet_Shop2\\Pet_Shop2.csproj",
       "packagesPath": "C:\\Users\\TRUNG DUC\\.nuget\\packages\\",
-      "outputPath": "D:\\dotnet\\Pet_Shop2\\Pet_Shop2\\obj\\",
+      "outputPath": "C:\\Users\\TRUNG DUC\\Downloads\\Pet_Shop2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
