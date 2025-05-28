@@ -58,6 +58,7 @@ namespace Pet_Shop2.Controllers
         [AllowAnonymous]
         public IActionResult Login()
         {
+
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
             var returnUrl = HttpContext.Request.Query["ReturnUrl"].ToString();
             if (taikhoanID == null)
@@ -68,9 +69,13 @@ namespace Pet_Shop2.Controllers
             }
             else
             {
+
                 return RedirectToAction("index", "home");
+
             }
+
         }
+
 
         [HttpPost]
         [AllowAnonymous]
@@ -81,8 +86,8 @@ namespace Pet_Shop2.Controllers
                 if (ModelState.IsValid)
                 {
                     bool IsEmail = Utilities.IsValidEmail(model?.UserName);
-                    
-                    var cus = db.Accounts.AsNoTracking().SingleOrDefault(x => x.Email == model.UserName&& IsEmail==true||x.UserName==model.UserName);
+
+                    var cus = db.Accounts.AsNoTracking().SingleOrDefault(x => x.Email == model.UserName && IsEmail == true || x.UserName == model.UserName);
                     if (cus == null)
                     {
                         notyfService.Error("Thông tin đăng nhập chưa chính xác !");
@@ -241,7 +246,7 @@ namespace Pet_Shop2.Controllers
                     string? userName = acc.UserName;
                     Random rd = new Random();
                     int randompass = rd.Next(100000, 999999);
-                    string style = "<style type='text/css'>\r\n    #outlook a {\r\n        padding:0;\r\n    }\r\n    .ExternalClass {\r\n        width:100%;\r\n    }\r\n    .ExternalClass,\r\n    .ExternalClass p,\r\n    .ExternalClass span,\r\n    .ExternalClass font,\r\n    .ExternalClass td,\r\n    .ExternalClass div {\r\n        line-height:100%;\r\n    }\r\n    .es-button {\r\n        mso-style-priority:100!important;\r\n        text-decoration:none!important;\r\n    }\r\n    a[x-apple-data-detectors] {\r\n        color:inherit!important;\r\n        text-decoration:none!important;\r\n        font-size:inherit!important;\r\n        font-family:inherit!important;\r\n        font-weight:inherit!important;\r\n        line-height:inherit!important;\r\n    }\r\n    .es-desk-hidden {\r\n        display:none;\r\n        float:left;\r\n        overflow:hidden;\r\n        width:0;\r\n        max-height:0;\r\n        line-height:0;\r\n        mso-hide:all;\r\n    }\r\n    .es-button-border:hover a.es-button {\r\n        background:#ffffff!important;\r\n        border-color:#ffffff!important;\r\n    }\r\n    .es-button-border:hover {\r\n        background:#ffffff!important;\r\n        border-style:solid solid solid solid!important;\r\n        border-color:#259cd8 #259cd8 #259cd8 #259cd8!important;\r\n    }\r\n    @media only screen and (max-width:600px) {p, ul li, ol li, a { font-size:16px!important; line-height:150%!important } h1 { font-size:20px!important; text-align:center; line-height:120%!important } h2 { font-size:16px!important; text-align:left; line-height:120%!important } h3 { font-size:20px!important; text-align:center; line-height:120%!important } h1 a { font-size:20px!important } h2 a { font-size:16px!important; text-align:left } h3 a { font-size:20px!important } .es-menu td a { font-size:14px!important } .es-header-body p, .es-header-body ul li, .es-header-body ol li, .es-header-body a { font-size:10px!important } .es-footer-body p, .es-footer-body ul li, .es-footer-body ol li, .es-footer-body a { font-size:12px!important } .es-infoblock p, .es-infoblock ul li, .es-infoblock ol li, .es-infoblock a { font-size:12px!important } *[class='gmail-fix'] { display:none!important } .es-m-txt-c, .es-m-txt-c h1, .es-m-txt-c h2, .es-m-txt-c h3 { text-align:center!important } .es-m-txt-r, .es-m-txt-r h1, .es-m-txt-r h2, .es-m-txt-r h3 { text-align:right!important } .es-m-txt-l, .es-m-txt-l h1, .es-m-txt-l h2, .es-m-txt-l h3 { text-align:left!important } .es-m-txt-r img, .es-m-txt-c img, .es-m-txt-l img { display:inline!important } .es-button-border { display:block!important } a.es-button { font-size:14px!important; display:block!important; border-left-width:0px!important; border-right-width:0px!important } .es-btn-fw { border-width:10px 0px!important; text-align:center!important } .es-adaptive table, .es-btn-fw, .es-btn-fw-brdr, .es-left, .es-right { width:100%!important } .es-content table, .es-header table, .es-footer table, .es-content, .es-footer, .es-header { width:100%!important; max-width:600px!important } .es-adapt-td { display:block!important; width:100%!important } .adapt-img { width:100%!important; height:auto!important } .es-m-p0 { padding:0px!important } .es-m-p0r { padding-right:0px!important } .es-m-p0l { padding-left:0px!important } .es-m-p0t { padding-top:0px!important } .es-m-p0b { padding-bottom:0!important } .es-m-p20b { padding-bottom:20px!important } .es-mobile-hidden, .es-hidden { display:none!important } tr.es-desk-hidden, td.es-desk-hidden, table.es-desk-hidden { width:auto!important; overflow:visible!important; float:none!important; max-height:inherit!important; line-height:inherit!important } tr.es-desk-hidden { display:table-row!important } table.es-desk-hidden { display:table!important } td.es-desk-menu-hidden { display:table-cell!important } .es-menu td { width:1%!important } table.es-table-not-adapt, .esd-block-html table { width:auto!important } table.es-social { display:inline-block!important } table.es-social td { display:inline-block!important } }\r\n      </style>"; 
+                    string style = "<style type='text/css'>\r\n    #outlook a {\r\n        padding:0;\r\n    }\r\n    .ExternalClass {\r\n        width:100%;\r\n    }\r\n    .ExternalClass,\r\n    .ExternalClass p,\r\n    .ExternalClass span,\r\n    .ExternalClass font,\r\n    .ExternalClass td,\r\n    .ExternalClass div {\r\n        line-height:100%;\r\n    }\r\n    .es-button {\r\n        mso-style-priority:100!important;\r\n        text-decoration:none!important;\r\n    }\r\n    a[x-apple-data-detectors] {\r\n        color:inherit!important;\r\n        text-decoration:none!important;\r\n        font-size:inherit!important;\r\n        font-family:inherit!important;\r\n        font-weight:inherit!important;\r\n        line-height:inherit!important;\r\n    }\r\n    .es-desk-hidden {\r\n        display:none;\r\n        float:left;\r\n        overflow:hidden;\r\n        width:0;\r\n        max-height:0;\r\n        line-height:0;\r\n        mso-hide:all;\r\n    }\r\n    .es-button-border:hover a.es-button {\r\n        background:#ffffff!important;\r\n        border-color:#ffffff!important;\r\n    }\r\n    .es-button-border:hover {\r\n        background:#ffffff!important;\r\n        border-style:solid solid solid solid!important;\r\n        border-color:#259cd8 #259cd8 #259cd8 #259cd8!important;\r\n    }\r\n    @media only screen and (max-width:600px) {p, ul li, ol li, a { font-size:16px!important; line-height:150%!important } h1 { font-size:20px!important; text-align:center; line-height:120%!important } h2 { font-size:16px!important; text-align:left; line-height:120%!important } h3 { font-size:20px!important; text-align:center; line-height:120%!important } h1 a { font-size:20px!important } h2 a { font-size:16px!important; text-align:left } h3 a { font-size:20px!important } .es-menu td a { font-size:14px!important } .es-header-body p, .es-header-body ul li, .es-header-body ol li, .es-header-body a { font-size:10px!important } .es-footer-body p, .es-footer-body ul li, .es-footer-body ol li, .es-footer-body a { font-size:12px!important } .es-infoblock p, .es-infoblock ul li, .es-infoblock ol li, .es-infoblock a { font-size:12px!important } *[class='gmail-fix'] { display:none!important } .es-m-txt-c, .es-m-txt-c h1, .es-m-txt-c h2, .es-m-txt-c h3 { text-align:center!important } .es-m-txt-r, .es-m-txt-r h1, .es-m-txt-r h2, .es-m-txt-r h3 { text-align:right!important } .es-m-txt-l, .es-m-txt-l h1, .es-m-txt-l h2, .es-m-txt-l h3 { text-align:left!important } .es-m-txt-r img, .es-m-txt-c img, .es-m-txt-l img { display:inline!important } .es-button-border { display:block!important } a.es-button { font-size:14px!important; display:block!important; border-left-width:0px!important; border-right-width:0px!important } .es-btn-fw { border-width:10px 0px!important; text-align:center!important } .es-adaptive table, .es-btn-fw, .es-btn-fw-brdr, .es-left, .es-right { width:100%!important } .es-content table, .es-header table, .es-footer table, .es-content, .es-footer, .es-header { width:100%!important; max-width:600px!important } .es-adapt-td { display:block!important; width:100%!important } .adapt-img { width:100%!important; height:auto!important } .es-m-p0 { padding:0px!important } .es-m-p0r { padding-right:0px!important } .es-m-p0l { padding-left:0px!important } .es-m-p0t { padding-top:0px!important } .es-m-p0b { padding-bottom:0!important } .es-m-p20b { padding-bottom:20px!important } .es-mobile-hidden, .es-hidden { display:none!important } tr.es-desk-hidden, td.es-desk-hidden, table.es-desk-hidden { width:auto!important; overflow:visible!important; float:none!important; max-height:inherit!important; line-height:inherit!important } tr.es-desk-hidden { display:table-row!important } table.es-desk-hidden { display:table!important } td.es-desk-menu-hidden { display:table-cell!important } .es-menu td { width:1%!important } table.es-table-not-adapt, .esd-block-html table { width:auto!important } table.es-social { display:inline-block!important } table.es-social td { display:inline-block!important } }\r\n      </style>";
                     string Mailbody = $@"<!DOCTYPE html>
 <html xmlns:o='urn:schemas-microsoft-com:office:office' style='width:100%;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0'>
  <head>
@@ -376,7 +381,11 @@ namespace Pet_Shop2.Controllers
  </body>
 </html>";
 
-                    acc.Password =HashMD5.ToMD5(randompass.ToString());
+
+
+
+
+                    acc.Password = HashMD5.ToMD5(randompass.ToString());
                     db.SaveChanges();
 
                     string subject = "THƯ RESET MẬT KHẨU TÀI KHOẢN VTUANMAI!";
@@ -406,7 +415,7 @@ namespace Pet_Shop2.Controllers
 
                     smtp.Send(mailMessage);
                     notyfService.Success("Cập nhật mật khẩu thành công !");
-                    return RedirectToAction("notyfication","cus_account");
+                    return RedirectToAction("notyfication", "cus_account");
                 }
                 else
                 {
@@ -427,14 +436,14 @@ namespace Pet_Shop2.Controllers
         }
 
         [HttpPost]
-        public IActionResult ChangePassword(int ID,string newpass="")
+        public IActionResult ChangePassword(int ID, string newpass = "")
         {
             var acc = db.Accounts.SingleOrDefault(x => x.Id == ID);
-            if (acc != null) 
-            { 
-                if(!string.IsNullOrEmpty(newpass))
+            if (acc != null)
+            {
+                if (!string.IsNullOrEmpty(newpass))
                 {
-                    acc.Password=newpass.ToMD5();
+                    acc.Password = newpass.ToMD5();
                     db.SaveChanges();
                     return Json(new { success = true });
                 }

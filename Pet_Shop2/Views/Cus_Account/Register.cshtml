@@ -15,8 +15,8 @@
                     <h4>Email</h4>
                     <div class="container_flex_login login_user">
                         <i class='bx bx-user'></i>
-                       @* <input class="login_user_main" type="email">*@
-                        @Html.TextBoxFor(x=>x.Email, new{@class="login_user_main",@type="email"})
+                        @* <input class="login_user_main" type="email">*@
+                        @Html.TextBoxFor(x => x.Email, new { @class = "login_user_main", @type = "email" })
                     </div>
                 </div>
                 <div class="container_input">
@@ -24,7 +24,7 @@
                     <div class="container_flex_login login_user">
                         <i class='bx bx-user'></i>
                         @* <input class="login_user_main" type="email">*@
-                        @Html.TextBoxFor(x=>x.UserName, new{@class="login_user_main",@type="text"})
+                        @Html.TextBoxFor(x => x.UserName, new { @class = "login_user_main", @type = "text" })
                     </div>
                 </div>
                 <div class="container_input">
@@ -32,7 +32,7 @@
                     <div class="container_flex_login password_user">
                         <i class='bx bx-lock-alt'></i>
                         @*<input class="password_user_main" type="password">*@
-                        @Html.TextBoxFor(x=>x.Password, new{@class="password_user_main",@type="password"})
+                        @Html.TextBoxFor(x => x.Password, new { @class = "password_user_main", @type = "password" })
                     </div>
                 </div>
                 <div class="container_input">
@@ -40,7 +40,7 @@
                     <div class="container_flex_login password_user">
                         <i class='bx bx-lock-alt'></i>
                         @*<input class="password_user_main" type="password">*@
-                        @Html.TextBoxFor(x=>x.ConfirmPassword, new{@class="password_user_main",@type="password"})
+                        @Html.TextBoxFor(x => x.ConfirmPassword, new { @class = "password_user_main", @type = "password" })
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                     <div class="container_flex_login login_user">
                         <i class='bx bx-id-card'></i>
                         @*<input class="login_user_main" type="text">*@
-                        @Html.TextBoxFor(x=>x.FullName, new{@class="login_user_main",@type="text"})
+                        @Html.TextBoxFor(x => x.FullName, new { @class = "login_user_main", @type = "text" })
                     </div>
                 </div>
                 <div class="container_input">
@@ -58,13 +58,13 @@
                     <div class="container_flex_login login_user">
                         <i class='bx bx-phone'></i>
                         @*<input class="login_user_main" type="number">*@
-                        @Html.TextBoxFor(x=>x.Phone, new{@class="login_user_main",@type="number"})
+                        @Html.TextBoxFor(x => x.Phone, new { @class = "login_user_main", @type = "number" })
                     </div>
                 </div>
                 <div class="container_input">
                     <h4>Địa chỉ</h4>
                     <div class="container_flex_login login_user">
-                        @Html.TextAreaFor(x=>x.Address,new {@class="login_user_main",@rows=3})
+                        @Html.TextAreaFor(x => x.Address, new { @class = "login_user_main", @rows = 3 })
                         @*<textarea class="login_user_main" name="" id="" cols="30" rows="3"></textarea>*@
                     </div>
                 </div>

@@ -3,28 +3,25 @@
 @using X.PagedList.Mvc.Common;
 @using X.PagedList.Mvc.Core;
 @using X.PagedList;
-@section Linkheader{
+
+@section Linkheader {
     <link rel="stylesheet" href="~/Admin_assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
     <link rel="stylesheet" href="~/Admin_assets/plugins/select2/css/select2.min.css">
 }
+
 @{
     ViewData["Title"] = "Danh sách đơn hàng";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
+
 <div class="card card-default">
     <div class="card-header">
         <h3 class="card-title">Bộ lọc dữ liệu</h3>
-
         <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove">
-                <i class="fas fa-times"></i>
-            </button>
+            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
         </div>
     </div>
-    <!-- /.card-header -->
     <div class="card-body">
         <div class="row">
             <div class="col-6">
@@ -34,12 +31,9 @@
                         <option value="-1" selected>Tất cả</option>
                         <option value="0">Chưa thanh toán</option>
                         <option value="1">Thanh toán</option>
-                        
                     </select>
                 </div>
-
             </div>
-            <!-- /.col -->
             <div class="col-3">
                 <div class="form-group">
                     <label>Trạng thái</label>
@@ -57,7 +51,6 @@
                     <select id="order" class="form-control select2bs4" style="width: 100%;">
                         <option value="true" selected="selected">Tăng dần</option>
                         <option value="false">Giảm dần</option>
-
                     </select>
                 </div>
             </div>
@@ -66,18 +59,14 @@
             <div class="input-group input-group-lg">
                 <input id="keyword" type="search" class="form-control form-control-lg" placeholder="Từ khóa tìm kiếm" value="">
                 <div class="input-group-append">
-                    <button id="btnsearch" type="submit" class="btn btn-lg btn-default">
-                        <i class="fa fa-search"></i>
-                    </button>
+                    <button id="btnsearch" type="submit" class="btn btn-lg btn-default"><i class="fa fa-search"></i></button>
                 </div>
             </div>
         </div>
-        <!-- /.row -->
     </div>
 </div>
-<div class="card">
 
-    <!-- /.card-header -->
+<div class="card">
     <div class="card-body">
         @if (Model != null)
         {
@@ -95,11 +84,9 @@
                             <th class="text-center">Thanh toán</th>
                             <th class="text-center">Thao tác</th>
                         </tr>
-
                     </thead>
                     <tbody>
                         @{
-
                             int index = 1;
                             foreach (var item in Model)
                             {
@@ -111,125 +98,118 @@
                                     <td class="align-middle text-center">@item.ShipDate</td>
                                     <td class="align-middle text-center">@item?.TransctStatus?.Name</td>
                                     <td style="width:150px" class="align-middle">@item?.Address</td>
-                                    
-                                    <td class="align-middle text-center">@(item?.Paid==true? "Đã thanh toán" : "Chưa thanh toán")</td>
-
+                                    <td class="align-middle text-center">@(item?.Paid == true ? "Đã thanh toán" : "Chưa thanh toán")</td>
                                     <td class="align-middle text-center">
                                         <a class="btn btn-warning" href="~/admin/order/details/?id=@item?.Id">Chi tiết</a> |
                                         <button class="btn btn-danger" onclick="Delete(@item?.Id)">Xóa</button>
                                     </td>
                                 </tr>
-
                                 index++;
                             }
                         }
                     </tbody>
-
                 </table>
             </div>
-
-
         }
         else
         {
             <h3>Không có dữ liệu</h3>
         }
-
     </div>
-    <!-- /.card-body -->
     <div class="card-footer">
         <div style="float:right;">
-            @Html.PagedListPager((IPagedList)Model,page=>Url.Action("Index",new{page=page}),
-            new X.PagedList.Mvc.Common.PagedListRenderOptions{
-            DisplayLinkToFirstPage = PagedListDisplayMode.IfNeeded,
-            DisplayLinkToLastPage = PagedListDisplayMode.Never,
-            LinkToFirstPageFormat = "1",
-            LinkToPreviousPageFormat = "←",
-            LinkToNextPageFormat = "→",
-            MaximumPageNumbersToDisplay = 5,
-            DisplayItemSliceAndTotal = false,
-            LiElementClasses = new[] { "page-item" },
-            UlElementClasses = new string[] { "pagination" },
-            PageClasses = new string[] { "page-link" }
+            @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page = page }),
+                     new PagedListRenderOptions
+            {
+                DisplayLinkToFirstPage = PagedListDisplayMode.IfNeeded,
+                DisplayLinkToLastPage = PagedListDisplayMode.Never,
+                LinkToFirstPageFormat = "1",
+                LinkToPreviousPageFormat = "←",
+                LinkToNextPageFormat = "→",
+                MaximumPageNumbersToDisplay = 5,
+                DisplayItemSliceAndTotal = false,
+                LiElementClasses = new[] { "page-item" },
+                UlElementClasses = new[] { "pagination" },
+                PageClasses = new[] { "page-link" }
             })
         </div>
-
     </div>
 </div>
-@section Scripts{
+
+@section Scripts {
     <script>
-        
+        // Đưa Delete ra global scope để onclick trong HTML gọi được
+        function Delete(id) {
+            if (confirm("Bạn có chắc xóa đơn hàng này không ?")) {
+                $.ajax({
+                    url: '@Url.Action("Delete", "Order")',
+                    type: "POST",
+                    data: { id: id },
+                    success: function (result) {
+                        location.reload();
+                    }
+                });
+            }
+        }
+
         $(document).ready(function () {
             $('.select2').select2();
-            $('.select2bs4').select2({
-                theme: 'bootstrap4'
-            })
+            $('.select2bs4').select2({ theme: 'bootstrap4' });
+
             var statusthanhtoan = -1;
             var statustrangthai = -1;
             var sapxep = true;
+
             $("#method").on("change", function () {
                 statusthanhtoan = $(this).val();
             });
             $("#status").on("change", function () {
                 statustrangthai = $(this).val();
-            })
+            });
             $("#order").on("change", function () {
                 sapxep = $(this).val();
-            })
-            function Delete(id) {
-                if (confirm("Bạn có chắc xóa đơn hàng này không ?")) {
-                    $.ajax({
-                        url: '@Url.Action("Delete","Order")',
-                        type: "POST",
-                        data: { id: id },
-                        success: function (result) {
-                            // Xử lý kết quả sau khi xóa thành công
-                            // Ví dụ: cập nhật danh sách dữ liệu
-                            location.reload();
-                        }
-                    }
-                    );
-                }
-            }
+            });
 
-            //Thực hiện việc tìm kiếm dữ liệu khi search
             $("#keyword").keyup(function () {
                 var strkeyword = $("#keyword").val();
                 $.ajax({
                     type: 'POST',
                     url: '/Admin/Search/FindOrder/',
-                    data: { keyword: strkeyword,trangthai:statustrangthai,phuongthuc:statusthanhtoan,order:sapxep },
+                    data: {
+                        keyword: strkeyword,
+                        trangthai: statustrangthai,
+                        phuongthuc: statusthanhtoan,
+                        order: sapxep
+                    },
                     success: function (results) {
-                        $("#records_table").html("");
-                        //console.log(results);
                         $("#records_table").html(results);
                     },
                     error: function (xhr, status, error) {
                         console.log("Error:", error);
-                        // Xử lý lỗi ở đây nếu cần thiết
                     }
                 });
             });
-            //Thực hiện việc tìm kiếm dữ liệu khi bấm button
+
             $("#btnsearch").on("click", function () {
                 var strkeyword = $("#keyword").val();
                 $.ajax({
                     type: 'POST',
                     url: '/Admin/Search/FindOrder/',
-                    data: { keyword: strkeyword, trangthai: statustrangthai, phuongthuc: statusthanhtoan, order: sapxep },
+                    data: {
+                        keyword: strkeyword,
+                        trangthai: statustrangthai,
+                        phuongthuc: statusthanhtoan,
+                        order: sapxep
+                    },
                     success: function (results) {
-                        $("#records_table").html("");
                         $("#records_table").html(results);
                     },
                     error: function (xhr, status, error) {
                         console.log("Error:", error);
-                        // Xử lý lỗi ở đây nếu cần thiết
                     }
                 });
-            })
-        })
-       
-
+            });
+        });
     </script>
     <script src="~/Admin_assets/plugins/select2/js/select2.full.min.js"></script>
 }

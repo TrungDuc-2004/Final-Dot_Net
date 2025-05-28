@@ -21,39 +21,49 @@ namespace Pet_Shop2.Areas.Admin.Controllers
         {
             var pageNumber = page ?? 1;
             int pageSize = 15;
-            var OnePage = db.Orders.Include(x=>x.TransctStatus)
+            var OnePage = db.Orders.Include(x => x.TransctStatus)
                 .ToPagedList(pageNumber, pageSize);
             return View(OnePage);
 
         }
         [HttpPost]
+        [HttpPost]
         public IActionResult Delete(int id)
         {
-            // Lấy tất cả các chi tiết đơn hàng cần xóa
-            var orderDetailsToDelete = db.OrderDetails.Where(x => x.OrderId == id).ToList();
-
-            // Xóa tất cả các chi tiết đơn hàng
-            db.OrderDetails.RemoveRange(orderDetailsToDelete);
-            db.SaveChanges();
-
-            // Lấy đơn hàng cần xóa
-            var order = db.Orders.SingleOrDefault(x => x.Id == id);
-            if (order != null)
+            try
             {
-                db.Orders.Remove(order);
-                db.SaveChanges(); // Lưu thay đổi sau khi xóa đơn hàng
+                var orderDetails = db.OrderDetails.Where(od => od.OrderId == id).ToList();
+
+                if (orderDetails.Any())
+                {
+                    db.OrderDetails.RemoveRange(orderDetails);
+                }
+
+                var order = db.Orders.SingleOrDefault(o => o.Id == id);
+                if (order != null)
+                {
+                    db.Orders.Remove(order);
+                }
+                else
+                {
+                    return Json(new { success = false, message = "Không tìm thấy đơn hàng." });
+                }
+
+                db.SaveChanges();
+
+                return Json(new { success = true, message = "Xóa đơn hàng thành công." });
             }
-
-            // Thực hiện các hoạt động khác sau khi xóa thành công
-            /*otyfService.Success("Xóa đơn hàng thành công");*/
-
-            return Json(new { success = true });
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = "Lỗi khi xóa đơn hàng: " + ex.Message });
+            }
         }
+
 
         public IActionResult Details(int id)
         {
-            var order = db.Orders.Include(x=>x.OrderDetails).SingleOrDefault(x=>x.Id== id);
-            var orderdetail = db.OrderDetails.Where(x=>x.OrderId == id).ToList();
+            var order = db.Orders.Include(x => x.OrderDetails).SingleOrDefault(x => x.Id == id);
+            var orderdetail = db.OrderDetails.Where(x => x.OrderId == id).ToList();
             List<Product> lstProduct = new List<Product>();
             foreach (var item in orderdetail)
             {
@@ -70,17 +80,17 @@ namespace Pet_Shop2.Areas.Admin.Controllers
             return View(orderdetail);
         }
         [HttpPost]
-        public IActionResult Edit(int orderID,int status,bool paid=false)
+        public IActionResult Edit(int orderID, int status, bool paid = false)
         {
-            var order = db.Orders.SingleOrDefault(x=>x.Id==orderID);
-            if(order!=null)
+            var order = db.Orders.SingleOrDefault(x => x.Id == orderID);
+            if (order != null)
             {
                 order.TransctStatusId = status;
                 order.Paid = paid;
                 db.SaveChanges();
             }
             otyfService.Success("Cập nhật đơn hàng thành công!");
-            return RedirectToAction("Index","order");
+            return RedirectToAction("Index", "order");
         }
     }
 }
