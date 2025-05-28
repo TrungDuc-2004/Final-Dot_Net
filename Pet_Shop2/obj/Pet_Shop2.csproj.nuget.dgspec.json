@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TRUNG DUC\\Downloads\\Pet_Shop2\\Pet_Shop2.csproj": {}
+    "C:\\Users\\TRUNG DUC\\Source\\Repos\\Final-Dot_Net\\Pet_Shop2\\Pet_Shop2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TRUNG DUC\\Downloads\\Pet_Shop2\\Pet_Shop2.csproj": {
+    "C:\\Users\\TRUNG DUC\\Source\\Repos\\Final-Dot_Net\\Pet_Shop2\\Pet_Shop2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TRUNG DUC\\Downloads\\Pet_Shop2\\Pet_Shop2.csproj",
+        "projectUniqueName": "C:\\Users\\TRUNG DUC\\Source\\Repos\\Final-Dot_Net\\Pet_Shop2\\Pet_Shop2.csproj",
         "projectName": "Pet_Shop2",
-        "projectPath": "C:\\Users\\TRUNG DUC\\Downloads\\Pet_Shop2\\Pet_Shop2.csproj",
+        "projectPath": "C:\\Users\\TRUNG DUC\\Source\\Repos\\Final-Dot_Net\\Pet_Shop2\\Pet_Shop2.csproj",
         "packagesPath": "C:\\Users\\TRUNG DUC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TRUNG DUC\\Downloads\\Pet_Shop2\\obj\\",
+        "outputPath": "C:\\Users\\TRUNG DUC\\Source\\Repos\\Final-Dot_Net\\Pet_Shop2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,15 +56,15 @@
             },
             "HtmlAgilityPack": {
               "target": "Package",
-              "version": "[1.11.50, )"
+              "version": "[1.12.1, )"
             },
             "Microsoft.AspNetCore.Http.Extensions": {
               "target": "Package",
-              "version": "[2.1.21, )"
+              "version": "[2.3.0, )"
             },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
-              "version": "[2.1.39, )"
+              "version": "[2.3.1, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",

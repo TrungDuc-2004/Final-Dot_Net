@@ -9,253 +9,261 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Pet_Shop2
 build_property.RootNamespace = Pet_Shop2
-build_property.ProjectDir = C:\Users\TRUNG DUC\Downloads\Pet_Shop2\
+build_property.ProjectDir = C:\Users\TRUNG DUC\Source\Repos\Final-Dot_Net\Pet_Shop2\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\TRUNG DUC\Downloads\Pet_Shop2
+build_property.MSBuildProjectDirectory = C:\Users\TRUNG DUC\Source\Repos\Final-Dot_Net\Pet_Shop2
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 6.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Account/Create.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Account/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Account/Edit.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Account/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Account/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Blog/Create.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Blog/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Blog/Edit.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Blog/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Blog/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Categories/Create.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Categories/Edit.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Categories/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Customer/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Customer/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Customer/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Customer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Home/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Login/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Order/Details.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Order/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Order/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Order/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Page/Create.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Page/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFnZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Page/Edit.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Page/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFnZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Page/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Page/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Page/Trangchu.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Page/Trangchu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFnZVxUcmFuZ2NodS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Products/Create.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Products/Edit.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Products/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Products/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Products/IndexComment.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Products/IndexComment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcSW5kZXhDb21tZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Products/Track.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Products/Track.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcVHJhY2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Role/Create.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Role/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Role/Edit.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Role/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Role/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Role/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Search/listcommentsearchpartial.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Search/listcommentsearchpartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VhcmNoXGxpc3Rjb21tZW50c2VhcmNocGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Search/listcustomersearchpartial.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Search/listcustomersearchpartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VhcmNoXGxpc3RjdXN0b21lcnNlYXJjaHBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Search/listordersearchpartial.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Search/listordersearchpartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VhcmNoXGxpc3RvcmRlcnNlYXJjaHBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Search/ListProductsSearchPartial.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Search/ListProductsSearchPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VhcmNoXExpc3RQcm9kdWN0c1NlYXJjaFBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Shared/Components/Slider/SliderComponent.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Shared/Components/Slider/SliderComponent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2xpZGVyXFNsaWRlckNvbXBvbmVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Shared/Partial_nav_right.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Shared/Partial_nav_right.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXFBhcnRpYWxfbmF2X3JpZ2h0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Areas/Admin/Views/Shared/_ViewImports.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Areas/Admin/Views/Shared/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Checkout/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Checkout/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Contact/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/CusBlog/Detail.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/CusBlog/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzQmxvZ1xEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/CusBlog/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/CusBlog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/CusProduct/Detail.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/CusProduct/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzUHJvZHVjdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/CusProduct/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/CusProduct/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Cus_Account/changepassword.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Cus_Account/changepassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzX0FjY291bnRcY2hhbmdlcGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Cus_Account/forgetpassword.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Cus_Account/forgetpassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzX0FjY291bnRcZm9yZ2V0cGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Cus_Account/Login.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Cus_Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzX0FjY291bnRcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Cus_Account/notyfication.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Cus_Account/notyfication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzX0FjY291bnRcbm90eWZpY2F0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Cus_Account/Register.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Cus_Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzX0FjY291bnRcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Home/Error.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Home/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Home/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Home/Privacy.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/MyAccount/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/MyAccount/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/OrderTracking/Details.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/OrderTracking/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJUcmFja2luZ1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/OrderTracking/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/OrderTracking/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJUcmFja2luZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Search/listproductsCussearchpartial.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Search/listproductsCussearchpartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXGxpc3Rwcm9kdWN0c0N1c3NlYXJjaHBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Shared/Components/NumberCart/Default.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Shared/Components/NumberCart/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTnVtYmVyQ2FydFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Shared/Error.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Shared/_PartialHeader.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Shared/_PartialHeader.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsSGVhZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/ShoppingCart/Index.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/ShoppingCart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/_ViewImports.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/_ViewStart.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/TRUNG DUC/Downloads/Pet_Shop2/Views/Shared/_Layout.cshtml]
+[C:/Users/TRUNG DUC/Source/Repos/Final-Dot_Net/Pet_Shop2/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-59ozpc8r5j

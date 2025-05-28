@@ -1,0 +1,288 @@
+﻿@model Pet_Shop2.Areas.Admin.Models.AccountDetailsViewModel
+
+@{
+    ViewData["Title"] = "Chi tiết khách hàng" + (Model?.Account?.FullName != null ? ": " + Model.Account.FullName : "");
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section Linkheader {
+    <style>
+        .customer-info-group {
+            margin-bottom: 1rem; /* Khoảng cách giữa các mục thông tin */
+        }
+
+            .customer-info-group label {
+                font-weight: bold;
+                color: #555;
+                display: block;
+                margin-bottom: .25rem;
+            }
+
+            .customer-info-group .info-value {
+                font-size: 1rem;
+                word-break: break-word;
+            }
+
+        .status-badge {
+            font-size: 1em;
+            padding: .5em .75em;
+        }
+
+        .order-details-table th, .order-details-table td {
+            font-size: 0.9rem;
+            padding: .5rem;
+        }
+
+        .modal-lg {
+            max-width: 85%;
+        }
+
+        .card-title i { /* Thêm icon cho card title */
+            margin-right: 8px;
+        }
+    </style>
+}
+
+@* Bỏ Page Header theo yêu cầu *@
+
+@if (Model != null && Model.Account != null)
+{
+    <div class="card mt-4">
+        <div class="card-header bg-primary text-white">
+            <h4 class="card-title text-white mb-0"><i class="fas fa-user-circle"></i> Thông tin khách hàng: @Model.Account.FullName</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                @* Cột bên trái *@
+                <div class="col-md-6">
+                    <div class="customer-info-group">
+                        <label>ID Khách hàng:</label>
+                        <span class="info-value">@Model.Account.Id</span>
+                    </div>
+                    <div class="customer-info-group">
+                        <label>Họ và tên:</label>
+                        <span class="info-value">@Model.Account.FullName</span>
+                    </div>
+                    <div class="customer-info-group">
+                        <label>Tên đăng nhập:</label>
+                        <span class="info-value">@Model.Account.UserName</span>
+                    </div>
+                    <div class="customer-info-group">
+                        <label>Email:</label>
+                        <span class="info-value">@Model.Account.Email</span>
+                    </div>
+                    <div class="customer-info-group">
+                        <label>Số điện thoại:</label>
+                        <span class="info-value">@Model.Account.Phone</span>
+                    </div>
+                    <div class="customer-info-group">
+                        <label>Ngày sinh:</label>
+                        <span class="info-value">@Model.Account.Birthdate?.ToString("dd/MM/yyyy")</span>
+                    </div>
+                </div>
+
+                @* Cột bên phải *@
+                <div class="col-md-6">
+                    <div class="customer-info-group">
+                        <label>Địa chỉ chi tiết:</label>
+                        <span class="info-value">@Model.Account.Address</span>
+                    </div>
+                    <div class="customer-info-group">
+                        <label>Phường/Xã:</label>
+                        <span class="info-value">@Model.Account.Ward</span>
+                    </div>
+                    <div class="customer-info-group">
+                        <label>Quận/Huyện:</label>
+                        <span class="info-value">@Model.Account.District</span>
+                    </div>
+                    <div class="customer-info-group">
+                        <label>Tỉnh/Thành phố:</label>
+                        <span class="info-value">@Model.Account.Location</span>
+                    </div>
+                    <div class="customer-info-group">
+                        <label>Ngày tạo TK:</label>
+                        <span class="info-value">@Model.Account.CreateDate?.ToString("dd/MM/yyyy HH:mm")</span>
+                    </div>
+                    <div class="customer-info-group">
+                        <label>Đăng nhập cuối:</label>
+                        <span class="info-value">@Model.Account.LastLogin?.ToString("dd/MM/yyyy HH:mm")</span>
+                    </div>
+                    <div class="customer-info-group">
+                        <label>Vai trò:</label>
+                        <span class="info-value">@Model.Account.Role?.RoleName</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mt-1 mb-3" />
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="customer-info-group">
+                        <label>Trạng thái:</label>
+                        <span class="info-value">
+                            @if (Model.Account.Active == true)
+                            {
+                                <span class="badge badge-success status-badge">Hoạt động</span>
+                            }
+                            else
+                            {
+                                <span class="badge badge-danger status-badge">Không hoạt động</span>
+                            }
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header bg-info text-white">
+            <h4 class="card-title text-white mb-0"><i class="fas fa-history"></i> Lịch sử đơn hàng (@(Model.Orders?.Count ?? 0) đơn)</h4>
+        </div>
+        <div class="card-body">
+            @if (Model.Orders != null && Model.Orders.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered table-sm">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>@Html.DisplayNameFor(m => m.Orders.First().OrderId)</th>
+                                <th>@Html.DisplayNameFor(m => m.Orders.First().OrderDate)</th>
+                                <th>@Html.DisplayNameFor(m => m.Orders.First().ShipDate)</th>
+                                <th>@Html.DisplayNameFor(m => m.Orders.First().TransactionStatus)</th>
+                                <th>@Html.DisplayNameFor(m => m.Orders.First().IsPaid)</th>
+                                <th class="text-right">@Html.DisplayNameFor(m => m.Orders.First().TotalOrderAmount)</th>
+                                <th class="text-center">Chi tiết</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var order in Model.Orders)
+                            {
+                                <tr>
+                                    <td>@order.OrderId</td>
+                                    <td>@Html.DisplayFor(modelItem => order.OrderDate)</td>
+                                    <td>@Html.DisplayFor(modelItem => order.ShipDate)</td>
+                                    <td><span class="badge badge-info">@order.TransactionStatus</span></td>
+                                    <td>
+                                        @if (order.IsPaid)
+                                        {
+                                            <span class="badge badge-success">Đã TT</span>
+                                            @if (order.PaymentDate.HasValue)
+                                            {
+                                                <br />
+
+                                                <small class="text-muted">@order.PaymentDate.Value.ToString("dd/MM/yy")</small>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-warning">Chưa TT</span>
+                                        }
+                                    </td>
+                                    <td class="text-right">@Html.DisplayFor(modelItem => order.TotalOrderAmount)</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#orderDetailsModal-@order.OrderId">
+                                            <i class="fas fa-list-ul"></i> Xem
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <div class="modal fade" id="orderDetailsModal-@order.OrderId" tabindex="-1" role="dialog" aria-labelledby="orderDetailsModalLabel-@order.OrderId" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-primary text-white">
+                                                <h5 class="modal-title" id="orderDetailsModalLabel-@order.OrderId">Chi tiết đơn hàng #@order.OrderId</h5>
+                                                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p><strong>Ngày đặt:</strong> @order.OrderDate?.ToString("dd/MM/yyyy HH:mm")</p>
+                                                <p><strong>Địa chỉ giao hàng:</strong> @order.ShippingAddress</p>
+                                                @if (!string.IsNullOrEmpty(order.PaymentMethod))
+                                                {
+                                                    <p><strong>Phương thức thanh toán:</strong> @order.PaymentMethod</p>
+                                                }
+                                                <p><strong>Trạng thái đơn hàng:</strong> @order.TransactionStatus</p>
+                                                <p><strong>Thanh toán:</strong> @(order.IsPaid ? "Đã thanh toán" : "Chưa thanh toán")</p>
+
+                                                <h6 class="mt-3">Sản phẩm trong đơn:</h6>
+                                                @if (order.OrderDetails != null && order.OrderDetails.Any())
+                                                {
+                                                    <div class="table-responsive">
+                                                        <table class="table table-sm table-bordered order-details-table">
+                                                            <thead class="thead-light">
+                                                                <tr>
+                                                                    <th>@Html.DisplayNameFor(m => order.OrderDetails.First().ProductName)</th>
+                                                                    <th class="text-center">@Html.DisplayNameFor(m => order.OrderDetails.First().Quantity)</th>
+                                                                    <th class="text-right">@Html.DisplayNameFor(m => order.OrderDetails.First().UnitPrice)</th>
+                                                                    <th class="text-right">@Html.DisplayNameFor(m => order.OrderDetails.First().Discount)</th>
+                                                                    <th class="text-right">@Html.DisplayNameFor(m => order.OrderDetails.First().LineTotal)</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @foreach (var detail in order.OrderDetails)
+                                                                {
+                                                                    <tr>
+                                                                        <td>@detail.ProductName (ID SP: @detail.ProductId)</td>
+                                                                        <td class="text-center">@detail.Quantity</td>
+                                                                        <td class="text-right">@detail.UnitPrice?.ToString("#,##0")</td>
+                                                                        <td class="text-right">@detail.Discount?.ToString("#,##0")</td>
+                                                                        <td class="text-right">@detail.LineTotal?.ToString("#,##0") VNĐ</td>
+                                                                    </tr>
+                                                                }
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <td colspan="4" class="text-right font-weight-bold">Tổng cộng đơn hàng:</td>
+                                                                    <td class="text-right font-weight-bold">@order.TotalOrderAmount.ToString("#,##0") VNĐ</td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <p class="text-muted">Không có sản phẩm nào trong đơn hàng này.</p>
+                                                }
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-secondary mt-3 text-center">Khách hàng này chưa có đơn hàng nào.</div>
+            }
+        </div>
+        <div class="card-footer text-right">
+            <a href="@Url.Action("Index", "Customer", new { Area = "Admin" })" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Quay lại danh sách</a>
+        </div>
+    </div> @* Đóng card Lịch sử đơn hàng *@
+}
+else
+{
+    <div class="card mt-4">
+        <div class="card-body">
+            <div class="alert alert-danger text-center">
+                <h4><i class="icon fas fa-ban"></i> Lỗi!</h4>
+                <p>Không tìm thấy thông tin khách hàng hoặc có lỗi xảy ra khi tải dữ liệu.</p>
+            </div>
+            <div class="text-center mt-3">
+                <a href="@Url.Action("Index", "Customer", new { Area = "Admin" })" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Quay lại danh sách khách hàng</a>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+@* Scripts nếu cần *@
+}

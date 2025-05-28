@@ -1,0 +1,106 @@
+﻿@model Pet_Shop2.Models.Account
+
+@{
+    ViewData["Title"] = "Xác nhận xóa khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="page-header">
+    <h2 class="header-title">@ViewData["Title"]@(Model != null ? ": " + Model.FullName : "")</h2>
+    <div class="header-sub-title">
+        <nav class="breadcrumb breadcrumb-dash">
+            <a href="@Url.Action("Index", "Home", new { Area = "Admin" })" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Trang chủ</a>
+            <a href="@Url.Action("Index", "Customer", new { Area = "Admin" })" class="breadcrumb-item">Danh sách khách hàng</a>
+            <span class="breadcrumb-item active">Xác nhận xóa</span>
+        </nav>
+    </div>
+</div>
+
+@if (Model != null)
+{
+    <div class="card">
+        <div class="card-header bg-danger text-white">
+            <h4 class="card-title text-white mb-0"><i class="fas fa-exclamation-triangle"></i> Xác nhận thao tác xóa</h4>
+        </div>
+        <div class="card-body">
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    <h5 class="alert-heading">Không thể xóa!</h5>
+                    <p>@TempData["ErrorMessage"]</p>
+                </div>
+            }
+            else if (ViewBag.ErrorMessage != null) // Dành cho trường hợp controller set ViewBag
+            {
+                <div class="alert alert-danger" role="alert">
+                    <h5 class="alert-heading">Không thể xóa!</h5>
+                    <p>@ViewBag.ErrorMessage</p>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning" role="alert">
+                    <h5 class="alert-heading">Cảnh báo!</h5>
+                    <p>Bạn có chắc chắn muốn xóa vĩnh viễn khách hàng <strong>@Model.FullName</strong> không? Hành động này KHÔNG THỂ hoàn tác.</p>
+                </div>
+            }
+
+            <div class="mt-4">
+                <h5>Thông tin khách hàng sẽ bị xóa:</h5>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-3">ID:</dt>
+                    <dd class="col-sm-9">@Model.Id</dd>
+
+                    <dt class="col-sm-3">Họ và tên:</dt>
+                    <dd class="col-sm-9">@Model.FullName</dd>
+
+                    <dt class="col-sm-3">Tên đăng nhập:</dt>
+                    <dd class="col-sm-9">@Model.UserName</dd>
+
+                    <dt class="col-sm-3">Email:</dt>
+                    <dd class="col-sm-9">@Model.Email</dd>
+
+                    <dt class="col-sm-3">Điện thoại:</dt>
+                    <dd class="col-sm-9">@Model.Phone</dd>
+
+                    <dt class="col-sm-3">Trạng thái:</dt>
+                    <dd class="col-sm-9">
+                        @if (Model.Active == true)
+                        {
+                            <span class="badge badge-success">Hoạt động</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-danger">Không hoạt động</span>
+                        }
+                    </dd>
+                </dl>
+                <hr />
+                @if (ViewBag.CanDelete == null || (bool)ViewBag.CanDelete == true)
+                {
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" asp-for="Id" />
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Xác nhận Xóa</button>
+                        <a href="@Url.Action("Index", "Customer", new { Area = "Admin" })" class="btn btn-secondary"><i class="fas fa-times"></i> Hủy</a>
+                    </form>
+                }
+                else
+                {
+                    <a href="@Url.Action("Index", "Customer", new { Area = "Admin" })" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Quay lại danh sách</a>
+                }
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger text-center">
+        <h4><i class="icon fas fa-ban"></i> Lỗi!</h4>
+        <p>Không tìm thấy thông tin khách hàng để xóa hoặc có lỗi xảy ra khi tải dữ liệu.</p>
+    </div>
+    <div class="text-center mt-3">
+        <a href="@Url.Action("Index", "Customer", new { Area = "Admin" })" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Quay lại danh sách khách hàng</a>
+    </div>
+}
