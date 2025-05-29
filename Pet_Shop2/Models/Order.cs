@@ -26,7 +26,7 @@ public partial class Order
     public int? PaymentId { get; set; }
 
     public string? Note { get; set; }
-    public string Payway { get; set; } //cod or momo
+    public string? Payway { get; set; } //cod or momo
 
     public virtual Account? Account { get; set; }
 
