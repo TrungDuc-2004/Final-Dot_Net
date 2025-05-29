@@ -1,9 +1,10 @@
 ﻿@using Pet_Shop2.Helper;
 @*@model Pet_Shop2.Models.OrderDetail;*@
-@model Pet_Shop2.Models.Account;
+@model Pet_Shop2.ModelsView.OrderViewModel;
 @{
     var lsttinh = ViewBag.tinh as List<Location>;
     var lstCart = ViewBag.lstGioHang as List<Pet_Shop2.ModelsView.CartItem>;
+    var acc = ViewBag.acc as Account;
     Layout = "~/views/shared/_Layout.cshtml";
     ViewData["Title"] = "Thanh toán đơn hàng";
 }
@@ -23,7 +24,7 @@
                 <div class="customer_if_left l-6 m-6 s-12">
                     <div class="content_cus cus_name">
                         <h3>Tên khách hàng<span>*</span></h3>
-                        <input type="text" value="@Model.FullName" placeholder="Họ và tên" required>
+                        <input type="text" value="@acc.FullName" placeholder="Họ và tên" required>
                     </div>
                     <div class="content_cus">
                         <h3>Tỉnh thành<span>*</span></h3>
@@ -70,11 +71,11 @@
                     </div>
                     <div class="content_cus cus_phone">
                         <h3>Số điện thoại<span>*</span></h3>
-                        <input value="@Model.Phone" type="text" required>
+                        <input value="@acc.Phone" type="text" required>
                     </div>
                     <div class="content_cus cus_email">
                         <h3>Email<span>*</span></h3>
-                        <input id="emailcus" value="@Model.Email" type="text" required>
+                        <input id="emailcus" value="@acc.Email" type="text" required>
                     </div>
                     <div class="content_cus cus_desc">
                         <h3>Ghi chú đơn hàng</h3>
@@ -123,7 +124,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td style="color:red">@Utilities.ToVND(lstCart.Sum(x=>x.TotalMoney))</td>
+                        <td style="color:red">@Utilities.ToVND(lstCart.Sum(x => x.TotalMoney))</td>
                     </tr>
 
                 }
@@ -135,14 +136,14 @@
     <div class="area_pay margin-l-r margin-top">
         <div class="container_pay">
             <div class="container_select_pay">
-                <input name="select_pay" type="radio" required>
-                <h4>Thanh toán bằng tài khoản ngân hàng</h4>
+                <input name="select_pay" value="momo" type="radio" required>
+                <h4>Thanh toán bằng MoMo</h4>
             </div>
-            <p>Sử dụng tài khoản ngân hàng của bạn để thanh toán đơn hàng của bạn bằng cách chuyển qua số tài khoản, thông tin gửi bao gồm mã đơn hàng + số điện thoại + tên khách hàng !</p>
+            <p>Sử dụng MoMo để quét mã QR thanh toán !</p>
         </div>
         <div class="container_pay">
             <div class="container_select_pay">
-                <input name="select_pay" type="radio" required>
+                <input name="select_pay" value="code" type="radio" required checked>
                 <h4>Thanh toán sau khi nhận hàng</h4>
             </div>
             <p>Bạn sẽ trả tiền sau khi nhận đơn hàng sau thời gian 3 ngày kể từ khi đặt hàng</p>
@@ -150,7 +151,7 @@
         <button class="order_pay" type="submit">Đặt hàng</button>
     </div>
 </form>
-@section Scripts{
+@section Scripts {
     <script>
         $(document).ready(function () {
             $("#province").change(function () {
@@ -195,48 +196,48 @@
 
                 });
             });
-            $('#orderForm').submit(function (event){
-                event.preventDefault();
-                var formData = $(this).serialize();
+            // $('#orderForm').submit(function (event){
+            //     event.preventDefault();
+            //     var formData = $(this).serialize();
 
-                
 
-                $.ajax({
-                    url: '/checkout/themdonhang/',
-                    type: 'POST',
-                    datatype: 'json',
-                    data: formData,
-                    success: function (data) {
-                        
-                        Toastify({
 
-                            text: "Bạn vừa đặt hàng thành công !",
-                            close: true,
-                            duration: 2000,
-                            style: {
-                                background: "#28a745",
-                            },
-                            offset: {
-                                x: 0, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-                                y: 70 // vertical axis - can be a number or a string indicating unity. eg: '2em'
-                            }
+            //     $.ajax({
+            //         url: '/checkout/themdonhang/',
+            //         type: 'POST',
+            //         datatype: 'json',
+            //         data: formData,
+            //         success: function (data) {
 
-                        }).showToast();
-                        setTimeout(function () {
-                            var orderId = data.orderId;
-                            location.href = "/ordertracking/Details/?OrDerID=" + orderId;
-                        }, 2500);
-                        var emailcus = $("#emailcus").val()
-                        $.ajax({
-                            url: '/SendMail/SendMail',
-                            type: 'POST',
-                            data: { id: data.orderId, toEmail: emailcus }
-                        });
+            //             Toastify({
 
-                    }
-                });
-            });
-            
+            //                 text: "Bạn vừa đặt hàng thành công !",
+            //                 close: true,
+            //                 duration: 2000,
+            //                 style: {
+            //                     background: "#28a745",
+            //                 },
+            //                 offset: {
+            //                     x: 0, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            //                     y: 70 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            //                 }
+
+            //             }).showToast();
+            //             setTimeout(function () {
+            //                 var orderId = data.orderId;
+            //                 location.href = "/ordertracking/Details/?OrDerID=" + orderId;
+            //             }, 2500);
+            //             var emailcus = $("#emailcus").val()
+            //             $.ajax({
+            //                 url: '/SendMail/SendMail',
+            //                 type: 'POST',
+            //                 data: { id: data.orderId, toEmail: emailcus }
+            //             });
+
+            //         }
+            //     });
+            // });
+
         })
     </script>
 }
