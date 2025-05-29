@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Markdig;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using static System.Net.WebRequestMethods;
+using Newtonsoft.Json.Linq;
 using System.Text;
 
 namespace Pet_Shop2.Controllers
@@ -17,19 +18,24 @@ namespace Pet_Shop2.Controllers
 
 
             // Địa chỉ API và API key của bạn
-            string apiUrl = "https://api.openai.com/v1/chat/completions";
-            string apiKey = "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";
+            string apiUrl = "https://openrouter.ai/api/v1/chat/completions";
+            string apiKey = "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";
 
-            // Chuỗi tin nhắn bạn muốn gửi đến ChatGPT
-            string mess = message;
-
+            var requestData = new
+            {
+                model = "deepseek/deepseek-r1:free",
+                messages = new[]
+                {
+                    new { role = "user", content = message }
+                },
+            };
             // Tạo HttpClient để gửi yêu cầu
             using (HttpClient httpClient = new HttpClient())
             {
                 try
                 {
                     // Chuẩn bị dữ liệu yêu cầu dưới dạng JSON
-                    string jsonRequest = $"{{\"prompt\":\"{mess}\",\"max_tokens\":150}}";
+                    string jsonRequest = JsonConvert.SerializeObject(requestData);
 
                     // Tạo đối tượng HttpRequestMessage và thêm API key vào tiêu đề "Authorization"
                     HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, apiUrl);
@@ -41,7 +47,18 @@ namespace Pet_Shop2.Controllers
 
                     // Đọc và hiển thị câu trả lời từ phản hồi của API
                     string jsonResponse = await response.Content.ReadAsStringAsync();
-                    return jsonResponse;
+
+                    // Parse JSON để lấy nội dung phản hồi
+                    JObject parsed = JObject.Parse(jsonResponse);
+                    string content = parsed["choices"]?[0]?["message"]?["content"]?.ToString();
+
+                    if (string.IsNullOrEmpty(content))
+                        return "Không thể trích xuất phản hồi từ OpenAI.";
+
+                    // Chuyển markdown sang HTML
+                    string htmlContent = Markdown.ToHtml(content);
+
+                    return htmlContent;
                 }
                 catch (HttpRequestException e)
                 {

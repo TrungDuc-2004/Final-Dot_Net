@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Vbg9FNJzRw4=",
+  "dgSpecHash": "P1lT8Jw7Hso=",
   "success": true,
   "projectFilePath": "C:\\Users\\TRUNG DUC\\Source\\Repos\\Final-Dot_Net\\Pet_Shop2\\Pet_Shop2.csproj",
   "expectedPackageFiles": [
@@ -58,6 +58,7 @@
     "C:\\Users\\TRUNG DUC\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\TRUNG DUC\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\TRUNG DUC\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\TRUNG DUC\\.nuget\\packages\\markdig\\0.41.1\\markdig.0.41.1.nupkg.sha512",
     "C:\\Users\\TRUNG DUC\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\TRUNG DUC\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\TRUNG DUC\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",

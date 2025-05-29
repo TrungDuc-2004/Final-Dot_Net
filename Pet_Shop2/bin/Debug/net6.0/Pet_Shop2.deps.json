@@ -36,6 +36,7 @@
         "dependencies": {
           "AspNetCoreHero.ToastNotification": "1.1.0",
           "HtmlAgilityPack": "1.12.1",
+          "Markdig": "0.41.1",
           "Microsoft.AspNetCore.Http.Extensions": "2.3.0",
           "Microsoft.AspNetCore.Identity": "2.3.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.22",
@@ -935,6 +936,17 @@
           "lib/net6.0/zh-Hant/Humanizer.resources.dll": {
             "locale": "zh-Hant"
           }
+        }
+      },
+      "Markdig/0.41.1": {
+        "runtime": {
+          "lib/netstandard2.1/Markdig.dll": {
+            "assemblyVersion": "0.41.0.0",
+            "fileVersion": "0.41.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/Markdig.dll": {}
         }
       },
       "MessagePack/2.1.152": {
@@ -5736,6 +5748,13 @@
       "sha512": "sha512-VIXB7HCUC34OoaGnO3HJVtSv2/wljPhjV7eKH4+TFPgQdJj2lvHNKY41Dtg0Bphu7X5UaXFR4zrYYyo+GNOjbA==",
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
+    },
+    "Markdig/0.41.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e9QXUg2agxd9iWV3hO5fA4Qp2avMuXFiElatzD8hp69yIEgESrdhKvDFf9y9NOlPe9jO7AA6W1JAnntLmqwRwA==",
+      "path": "markdig/0.41.1",
+      "hashPath": "markdig.0.41.1.nupkg.sha512"
     },
     "MessagePack/2.1.152": {
       "type": "package",

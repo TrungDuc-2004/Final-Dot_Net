@@ -676,6 +676,19 @@
           }
         }
       },
+      "Markdig/0.41.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Markdig.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Markdig.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MessagePack/2.1.152": {
         "type": "package",
         "dependencies": {
@@ -5719,6 +5732,29 @@
         "lib/netstandard1.0/zh-Hant/Humanizer.resources.dll",
         "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll",
         "logo.png"
+      ]
+    },
+    "Markdig/0.41.1": {
+      "sha512": "e9QXUg2agxd9iWV3hO5fA4Qp2avMuXFiElatzD8hp69yIEgESrdhKvDFf9y9NOlPe9jO7AA6W1JAnntLmqwRwA==",
+      "type": "package",
+      "path": "markdig/0.41.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Markdig.dll",
+        "lib/net462/Markdig.xml",
+        "lib/net8.0/Markdig.dll",
+        "lib/net8.0/Markdig.xml",
+        "lib/net9.0/Markdig.dll",
+        "lib/net9.0/Markdig.xml",
+        "lib/netstandard2.0/Markdig.dll",
+        "lib/netstandard2.0/Markdig.xml",
+        "lib/netstandard2.1/Markdig.dll",
+        "lib/netstandard2.1/Markdig.xml",
+        "markdig.0.41.1.nupkg.sha512",
+        "markdig.nuspec",
+        "markdig.png",
+        "readme.md"
       ]
     },
     "MessagePack/2.1.152": {
@@ -13147,6 +13183,7 @@
     "net6.0": [
       "AspNetCoreHero.ToastNotification >= 1.1.0",
       "HtmlAgilityPack >= 1.12.1",
+      "Markdig >= 0.41.1",
       "Microsoft.AspNetCore.Http.Extensions >= 2.3.0",
       "Microsoft.AspNetCore.Identity >= 2.3.1",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.22",
@@ -13216,6 +13253,10 @@
           "HtmlAgilityPack": {
             "target": "Package",
             "version": "[1.12.1, )"
+          },
+          "Markdig": {
+            "target": "Package",
+            "version": "[0.41.1, )"
           },
           "Microsoft.AspNetCore.Http.Extensions": {
             "target": "Package",
