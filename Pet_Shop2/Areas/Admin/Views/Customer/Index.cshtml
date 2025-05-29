@@ -11,52 +11,6 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-@section Linkheader {
-    <link rel="stylesheet" href="~/Admin_assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-    <link rel="stylesheet" href="~/Admin_assets/plugins/select2/css/select2.min.css">
-    <style>
-        .table th, .table td {
-            vertical-align: middle !important;
-            padding: 0.75rem;
-        }
-
-        .form-label {
-            font-weight: bold;
-            margin-bottom: .5rem;
-        }
-
-        .pagination {
-            justify-content: flex-end !important;
-        }
-
-        .btn-xs {
-            padding: .25rem .5rem;
-            font-size: .875rem;
-            line-height: 1.5;
-            border-radius: .2rem;
-        }
-
-        .table-bordered th, .table-bordered td {
-            border: 1px solid #dee2e6;
-        }
-
-        .thead-light th {
-            background-color: #e9ecef;
-            border-color: #dee2e6;
-        }
-    </style>
-}
-
-<div class="page-header">
-    <h2 class="header-title">@ViewData["Title"]</h2>
-    <div class="header-sub-title">
-        <nav class="breadcrumb breadcrumb-dash">
-            <a href="@Url.Action("Index", "Home", new { Area = "Admin" })" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Trang chủ</a>
-            <span class="breadcrumb-item active">Danh sách khách hàng</span>
-        </nav>
-    </div>
-</div>
-
 <div class="card">
     <div class="card-header bg-primary">
         <h4 class="card-title text-white">
